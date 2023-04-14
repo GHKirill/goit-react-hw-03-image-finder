@@ -11,7 +11,7 @@ export default class ImageGalleryItem extends Component {
     this.props.showModalsUpdate();
   };
   render() {
-    const { item, photoIndex } = this.props;
+    const { item } = this.props;
     return (
       <img
         src={item.webformatURL}
