@@ -1,0 +1,11 @@
+.imageGallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: 0;
+  list-style: none;
+  gap: 25px;
+}
+.imageItem {
+  flex-basis: calc((100% - 75px) / 4);
+}

@@ -1,0 +1,26 @@
+.form {
+  margin: 0 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #9f51e7;
+}
+.inputForm {
+  display: block;
+  padding-left: 30px;
+  outline: none;
+}
+.formSearchBar {
+  display: block;
+  width: 200px;
+  position: relative;
+  margin: 0 auto;
+}
+.formButton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  padding: 5px 12px;
+  background-color: transparent;
+  cursor: pointer;
+}
