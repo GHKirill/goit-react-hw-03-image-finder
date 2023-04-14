@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import axios, { all } from 'axios';
-import { toast, ToastContainer } from 'react-toastify';
-import { Circles } from 'react-loader-spinner';
+import { ToastContainer } from 'react-toastify';
 import ImageGallery from './ImageGallery/ImageGallery';
 import SearchBar from './SearchBar/SearchBar';
 import Button from './Button/Button';
 import Modal from './Modal/Modal';
 import css from './App.module.css';
-
-const KEY = '33881811-455663e333f2bc5dbb769e41c';
 
 axios.defaults.baseURL = 'https://pixabay.com/api/';
 export class App extends Component {
