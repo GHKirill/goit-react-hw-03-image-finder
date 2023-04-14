@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import axios, { all } from 'axios';
 import { ToastContainer } from 'react-toastify';
 import ImageGallery from './ImageGallery/ImageGallery';
 import SearchBar from './SearchBar/SearchBar';
 import Button from './Button/Button';
 import Modal from './Modal/Modal';
 import css from './App.module.css';
-
-axios.defaults.baseURL = 'https://pixabay.com/api/';
 export class App extends Component {
   state = {
     queryWord: '',
@@ -63,7 +60,6 @@ export class App extends Component {
       loading,
       photosList,
       photoIndex,
-      showModals,
       wrongQuery,
       allPhotosNumber,
     } = this.state;
