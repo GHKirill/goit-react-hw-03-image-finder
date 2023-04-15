@@ -26,7 +26,7 @@ export default class Button extends Component {
           <div style={{ width: 40 }}></div>
         )}
         {wrongQuery ||
-        allPhotosNumber - currentPhotosNumber.length < 12 ||
+        allPhotosNumber === currentPhotosNumber.length ||
         currentPhotosNumber.length < 12 ? (
           <></>
         ) : (

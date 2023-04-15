@@ -20,6 +20,7 @@ export class App extends Component {
     this.setState({ queryWord: input.trim() });
     this.setState({ photosList: [] });
     this.setState({ wrongQuery: false });
+    this.setState({ page: 1 });
   };
   handleInputUpdate = queryWord => {
     this.setState({ queryWord });
@@ -27,6 +28,7 @@ export class App extends Component {
   };
   setButtonSearchEnabled = () => {
     this.setState({ wrongQuery: false });
+    this.setState({ allPhotosNumber: 0 });
   };
   handlingLoading = loading => {
     this.setState({ loading });
@@ -82,6 +84,7 @@ export class App extends Component {
           onSubmit={input => this.handleFormSubmit(input)}
           setButtonEnabled={() => this.setButtonSearchEnabled()}
           photosList={photosList}
+          allPhotosNumber={allPhotosNumber}
         />
         <ImageGallery
           input={queryWord}

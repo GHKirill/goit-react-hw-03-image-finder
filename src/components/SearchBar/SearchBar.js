@@ -39,7 +39,9 @@ export default class SearchBar extends Component {
     return (
       <div className={css.form}>
         <form onSubmit={this.handleFormSubmit} className={css.formSearchBar}>
-          {this.props.wrongQuery ? (
+          {this.props.wrongQuery ||
+          (this.props.allPhotosNumber &&
+            this.props.allPhotosNumber === this.props.photosList.length) ? (
             <button type="submit" disabled={true} className={css.formButton}>
               <FaSearch />
             </button>
