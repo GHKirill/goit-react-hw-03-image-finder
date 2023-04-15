@@ -35,13 +35,13 @@ export default class SearchBar extends Component {
   };
 
   render() {
+    const { wrongQuery, allPhotosNumber, photosList } = this.props;
     const { input } = this.state;
     return (
       <div className={css.form}>
         <form onSubmit={this.handleFormSubmit} className={css.formSearchBar}>
-          {this.props.wrongQuery ||
-          (this.props.allPhotosNumber &&
-            this.props.allPhotosNumber === this.props.photosList.length) ? (
+          {wrongQuery ||
+          (allPhotosNumber && allPhotosNumber === photosList.length) ? (
             <button type="submit" disabled={true} className={css.formButton}>
               <FaSearch />
             </button>
@@ -69,4 +69,5 @@ SearchBar.propTypes = {
   wrongQuery: PropTypes.bool.isRequired,
   onSubmit: PropTypes.func.isRequired,
   setButtonEnabled: PropTypes.func.isRequired,
+  allPhotosNumber: PropTypes.number.isRequired,
 };

@@ -8,10 +8,11 @@ export default class Button extends Component {
     this.props.addPage(this.props.page + 1);
   };
   render() {
-    const { wrongQuery, allPhotosNumber, currentPhotosNumber } = this.props;
+    const { wrongQuery, allPhotosNumber, currentPhotosNumber, loading } =
+      this.props;
     return (
       <div className={css.buttonWrapper}>
-        {this.props.loading ? (
+        {loading ? (
           <Circles
             className={css.spinner}
             height="40"

@@ -63,18 +63,20 @@ export default class ImageGallery extends Component {
   }
 
   render() {
+    const { photosList, photoIndex, photoIndexUpdate, showModalsUpdate } =
+      this.props;
     return (
       <>
-        {this.props.photosList.length > 0 && (
+        {photosList.length > 0 && (
           <ul className={css.imageGallery}>
-            {this.props.photosList.map(item => (
+            {photosList.map(item => (
               <li key={item.id} className={css.imageItem}>
                 <ImageGalleryItem
                   item={item}
-                  photoIndex={this.props.photoIndex}
-                  photosList={this.props.photosList}
-                  photoIndexUpdate={this.props.photoIndexUpdate}
-                  showModalsUpdate={this.props.showModalsUpdate}
+                  photoIndex={photoIndex}
+                  photosList={photosList}
+                  photoIndexUpdate={photoIndexUpdate}
+                  showModalsUpdate={showModalsUpdate}
                 />
               </li>
             ))}
